@@ -1,0 +1,142 @@
+$whiteMain: rgba(255, 255, 255, 0.87);
+$whiteSecondary: rgba(255, 255, 255, 0.67);
+$blackMain: rgb(12, 12, 12);
+$myGold: #D4AF37;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:focus {
+    outline: none;
+}
+
+body {
+    background-color: $blackMain;
+    position: relative;
+
+    .hero {
+        height: 100vh;
+    
+        .bg {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            float: right;
+        }
+
+        .bg-img-mini {
+            position: absolute;
+            width: 55vh;
+            height: 55vh;
+            right: 50%;
+            transform: translate(25%, 0);
+        }
+        
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(12, 12, 12, 0.3);
+            z-index: 10;
+        }
+    }
+    
+    nav {
+        position: fixed;;
+        display: flex;
+        align-items: center;
+        padding: 1em 6em;
+        background-color: $blackMain;
+        width: 100%;
+        z-index: 9999;
+        
+        .logo {
+            font-size: 1.5rem;
+            text-decoration: none;
+            padding-right: 2em;
+            color: $whiteMain;
+        }
+        
+        .nav-items {
+            color: $whiteMain;
+            display: flex;
+            list-style: none;
+    
+            a {
+                text-decoration: none;
+                font-size: 1.5rem;
+                padding: 0 2em;
+                color: $whiteMain;
+            }
+        }
+    }
+
+    .main-container {
+        color: $whiteMain;
+        width: auto;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 6em;
+        text-align: left;
+        z-index: 999;
+        overflow: hidden;
+
+        h1 {
+            font-size: 6rem;
+            font-weight: 400;
+            line-height: 110px;
+            padding-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            width: 70%;
+            line-height: 40px;
+            color: $whiteSecondary;
+            padding-bottom: 2rem;
+        }
+
+        .circles {
+            position: absolute;
+            top: 25vh;
+            left: 5vh;
+        }
+
+        .cta-container {
+            display: inline-flex;
+            align-items: center;
+
+            img {
+                padding-left: 1em;
+            }
+
+            a {
+                font-size: 1.5rem;
+                display: inline-block;
+                color: $myGold;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+        }
+
+    }
+            .bg-logo {
+                position: absolute;
+                bottom: 0;
+                font-size: 14rem;
+                line-height: 100px;
+                color: rgba(255, 255, 255, 0.02);
+            }
+
+}
+
