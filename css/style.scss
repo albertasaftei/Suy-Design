@@ -169,7 +169,7 @@ body {
             }
 
     .main {
-        
+        position: relative;
 
         .content-container {
             display: flex;
@@ -221,14 +221,24 @@ body {
                         letter-spacing: 5px;
                     }
                 }
-
-
-                
             }
-
-
-
         }
+
+        .bg-gallery-container {
+            position: absolute;
+            display: flex;
+            gap: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 50%;
+            z-index: -1;
+
+            img {
+                width: 300px;
+            }
+        }
+
     }
 
 }
