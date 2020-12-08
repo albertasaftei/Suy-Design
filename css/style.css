@@ -17,6 +17,7 @@ body {
 
 body .hero {
   height: 100vh;
+  position: relative;
 }
 
 body .hero .bg {
@@ -74,11 +75,33 @@ body nav .nav-items {
   list-style: none;
 }
 
-body nav .nav-items a {
+body nav .nav-items li {
+  padding: 0 2em;
+}
+
+body nav .nav-items li a {
   text-decoration: none;
   font-size: 1.5rem;
-  padding: 0 2em;
   color: rgba(255, 255, 255, 0.87);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  position: relative;
+}
+
+body nav .nav-items li a:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background: #D4AF37;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+body nav .nav-items li a:hover:after {
+  width: 100%;
 }
 
 body .main-container {
@@ -151,5 +174,61 @@ body .bg-logo {
   font-size: 14rem;
   line-height: 100px;
   color: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+}
+
+body .main {
+  padding: 10em 6em;
+}
+
+body .main .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+body .main .content-container img {
+  height: 70vh;
+}
+
+body .main .content-container .text-container {
+  padding-left: 4rem;
+}
+
+body .main .content-container .text-container h2 {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+  font-weight: 400;
+}
+
+body .main .content-container .text-container p {
+  font-size: 1.5rem;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.67);
+  padding-bottom: 2rem;
+}
+
+body .main .content-container .text-container a {
+  font-size: 1.5rem;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background-color: #E9C3B6;
+  padding: .5em 1em;
+  border: 2px solid #E9C3B6;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body .main .content-container .text-container a:hover {
+  background-color: #0c0c0c;
+  color: #E9C3B6;
 }
 /*# sourceMappingURL=style.css.map */
