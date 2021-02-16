@@ -1,10 +1,10 @@
-$whiteMain: rgba(255, 255, 255, 0.87);
+$whiteMain: rgba(255, 255, 255, 1);
 $whiteSecondary: rgba(255, 255, 255, 0.67);
 $blackMain: rgb(12, 12, 12);
 $myGold: #D4AF37;
 $myPink: #E9C3B6;
 
-$headerSize: 6rem;
+$headerSize: 7rem;
 $subheaderSize: 4rem;
 $paragraphSize: 1.5rem;
 
@@ -33,6 +33,7 @@ body {
             height: 100%;
             object-fit: cover;
             float: right;
+            transform: scaleX(-1);
         }
 
         .bg-img-mini {
@@ -49,7 +50,7 @@ body {
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgba(12, 12, 12, 0.3);
+            background-color: rgba(12, 12, 12, 0.2);
             z-index: 10;
         }
     }
@@ -83,6 +84,7 @@ body {
                     color: $whiteMain;
                     transition: all .5s ease;
                     position: relative;
+                    font-weight: 300;
 
                     &:after {
                         content: '';
@@ -118,7 +120,7 @@ body {
 
         h1 {
             font-size: $headerSize;
-            font-weight: 400;
+            font-weight: 600;
             line-height: 110px;
             padding-bottom: 2rem;
         }
